@@ -23,10 +23,6 @@ class CenterPanel extends Component {
     this.props.dispatch(deleteItemThunk());
   };
 
-  testHandler = () => {
-    console.log(this.props.list);
-  };
-
   render() {
     return (
       <div className="CenterPanel">
@@ -52,7 +48,6 @@ class CenterPanel extends Component {
           onClick={this.buttonHandler}
         />
         <input type="button" value="DELETE" onClick={this.deleteHandler} />
-        <input type="button" value="TEST" onClick={this.testHandler} />
       </div>
     );
   }
@@ -65,7 +60,6 @@ const mapStateToProps = (state) => {
     term: state.list.term,
     items: state.list.items,
     selectedListID: state.list.selectedListID,
-    list: state.list,
   };
 };
 
