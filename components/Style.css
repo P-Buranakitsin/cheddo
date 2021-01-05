@@ -1,0 +1,105 @@
+html,
+body,
+#root,
+#root > div:first-child {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  padding: 1ex;
+  overflow: hidden;
+  background-color: rgb(40, 41, 43);
+}
+
+.TodoList,
+.ActivityList {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  align-items: center;
+}
+
+.TodoBox,
+.ActivityBox {
+  display: flex;
+  width: 80%;
+  height: 75%;
+  background-color: rgb(18, 19, 19);
+  flex-direction: column;
+  border-radius: 1em;
+  overflow: auto;
+  padding: 2em;
+}
+
+.CenterPanel {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 50%;
+}
+
+h1[id="1"] {
+  text-align: center;
+  color: blueviolet;
+}
+
+h1[id="2"] {
+  text-align: center;
+  color: white;
+}
+
+input[type="text"] {
+  height: 2em;
+  width: 70%;
+  border-color: blueviolet;
+  background-color: transparent;
+  border-radius: 1ex;
+  color: white;
+}
+
+input[class="submit-button"] {
+  background-color: green;
+  color: white;
+  width: 6em;
+  height: 2em;
+  border-radius: 1ex;
+}
+
+input[value="DELETE"] {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  width: 6em;
+  height: 2em;
+}
+
+input[value="DELETE"]:hover {
+  background-color: red;
+  border-radius: 1ex;
+}
+
+text {
+  color: white;
+}
+
+p {
+  color: yellow;
+  text-align: left;
+  width: 70%;
+}
+
+li {
+  color: white;
+  line-height: 3;
+  font-size: larger;
+}
+
+h2 {
+  text-align: left;
+  color: white;
+  width: 70%;
+}
