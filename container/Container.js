@@ -8,8 +8,8 @@ import "../components/Style.css";
 
 class Container extends Component {
   componentDidMount() {
-    // Get first four rows data from the website
-    fetch("https://jsonplaceholder.typicode.com/todos?_start=0&_limit=4")
+    // Get first five objects from the website
+    fetch("https://jsonplaceholder.typicode.com/todos?_start=0&_limit=5")
       // json() method of the Body mixin takes a Response stream and
       // reads it to completion. It returns a promise that resolves
       // with the result of parsing the body text as JSON

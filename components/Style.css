@@ -3,10 +3,8 @@ body,
 #root,
 #root > div:first-child {
   display: flex;
-  flex-direction: row;
-  width: 100%;
   height: 100%;
-  flex: auto;
+  flex: 1;
   padding: 1ex;
   overflow: hidden;
   background-color: rgb(40, 41, 43);
@@ -16,15 +14,16 @@ body,
 .ActivityList {
   display: flex;
   flex-direction: column;
-  flex: auto;
+  flex: 2;
   align-items: center;
+  height: 90%;
 }
 
 .TodoBox,
 .ActivityBox {
   display: flex;
   width: 80%;
-  height: 75%;
+  height: 100%;
   background-color: rgb(18, 19, 19);
   flex-direction: column;
   border-radius: 1em;
@@ -34,11 +33,10 @@ body,
 
 .CenterPanel {
   display: flex;
-  flex: auto;
+  flex: 2;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  align-content: space-around;
   height: 50%;
 }
 
@@ -82,10 +80,6 @@ input[value="DELETE"]:hover {
   border-radius: 1ex;
 }
 
-text {
-  color: white;
-}
-
 p {
   color: yellow;
   text-align: left;
@@ -96,6 +90,13 @@ li {
   color: white;
   line-height: 3;
   font-size: larger;
+  width: 0;
+  min-width: 100%;
+  overflow-wrap: break-word;
+}
+
+::marker {
+  white-space: nowrap;
 }
 
 h2 {
