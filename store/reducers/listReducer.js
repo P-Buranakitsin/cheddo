@@ -25,7 +25,7 @@ const listReducer = (state = initialState, action) => {
       return {
         ...state,
         items: [...state.items, state.term],
-        activities: [...state.activities, `User created ${state.term} list`],
+        activities: [...state.activities, ["CREATE", state.term]],
         term: "",
       };
 
@@ -35,7 +35,7 @@ const listReducer = (state = initialState, action) => {
         items: action.items,
         activities: [
           ...state.activities,
-          `User updated ${state.prevTerm} list to ${state.term}`,
+          ["UPDATE", state.term, state.prevTerm], // has three elements because need to store previous term
         ],
         prevTerm: "",
         term: "",
@@ -57,10 +57,7 @@ const listReducer = (state = initialState, action) => {
         ...state,
         items: action.items,
         term: "",
-        activities: [
-          ...state.activities,
-          `User deleted ${state.prevTerm} list`,
-        ],
+        activities: [...state.activities, ["DELETE", state.prevTerm]],
         selectedListID: undefined,
         isEditing: false,
       };

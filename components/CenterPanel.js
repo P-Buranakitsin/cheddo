@@ -36,7 +36,7 @@ class CenterPanel extends Component {
           onChange={this.inputTextHandler}
           value={this.props.term}
         />
-        <p className="user-typing">{this.props.isTyping && "Typing......."}</p>
+        <p className="user-typing">{this.props.isTyping && "Typing......"}</p>
         <input
           className="submit-button"
           type="button"
